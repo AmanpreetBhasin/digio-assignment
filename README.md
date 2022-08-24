@@ -1,7 +1,9 @@
 The Urls for different pages are - 
 
-Login - localhost:4200/login
-Document View - localhost:4200/document-view
+Login - **localhost:4200/login**
+
+
+Document View - **localhost:4200/document-view**
 
 # DigioAssignment
 
