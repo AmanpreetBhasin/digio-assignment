@@ -15,6 +15,7 @@ export class AadhaarValidationComponent implements OnInit {
   public aadhaarVerified = false;
   constructor(public bsModalRef: BsModalRef, public validationService: ValidationService) { }
   ngOnInit(): void {
+    console.log(this.aadhaar);
     this.aadhaarVerified=false;
   }
   setAadhaarVerified() {

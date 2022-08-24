@@ -1,3 +1,8 @@
+The Urls for different pages are - 
+
+Login - localhost:4200/login
+Document View - localhost:4200/document-view
+
 # DigioAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.

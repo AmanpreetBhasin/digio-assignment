@@ -5,13 +5,13 @@
     </button>
   </div>
   <div class="modal-body">
-    <div *ngIf="aadhaar !== null && userAadhaar.errors && userAadhaar.errors.pattern" class="alert alert-danger mt-2" role="alert">
+    <div *ngIf="aadhaar && userAadhaar.errors && userAadhaar.errors.pattern" class="alert alert-danger mt-2" role="alert">
         Aadhaar must have 12 characters
     </div>
-    <div *ngIf="aadhaar !== null && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===false" class="alert alert-danger mt-2" role="alert">
+    <div *ngIf="aadhaar && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===false" class="alert alert-danger mt-2" role="alert">
         Please Accept the terms
     </div>
-    <div *ngIf="aadhaar !== null && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===true && aadhaarVerified===false" class="alert alert-success mt-2" role="alert">
+    <div *ngIf="aadhaar && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===true && aadhaarVerified===false" class="alert alert-success mt-2" role="alert">
         Click Verify to receive OTP
     </div>
     <div class="aadhaar-div">
