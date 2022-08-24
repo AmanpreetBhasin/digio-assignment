@@ -1,0 +1,37 @@
+.modal-body {
+    .aadhaar-div {
+        .aadhaar-input {
+            display: flex;
+            justify-content: flex-start;
+            .left-logo>img {
+                width: 60px;
+            }
+            /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+        }
+        .aadhaar-agree {
+            width: calc(100%-70px);
+            margin-left: 70px;
+        }
+    }
+    .otp-div {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            width: 100px;
+        }
+        input {
+            width: 150px;
+        }
+    }
+}

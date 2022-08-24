@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Register Aadhaar</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="close()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="aadhaar !== null && userAadhaar.errors && userAadhaar.errors.pattern" class="alert alert-danger mt-2" role="alert">
+        Aadhaar must have 12 characters
+    </div>
+    <div *ngIf="aadhaar !== null && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===false" class="alert alert-danger mt-2" role="alert">
+        Please Accept the terms
+    </div>
+    <div *ngIf="aadhaar !== null && !(userAadhaar.errors && userAadhaar.errors.pattern) && agree===true && aadhaarVerified===false" class="alert alert-success mt-2" role="alert">
+        Click Verify to receive OTP
+    </div>
+    <div class="aadhaar-div">
+        <div class="aadhaar-input">
+            <div class="left-logo mr-2"><img src="../../../assets/images/1200px-Aadhaar_Logo.svg.png"></div>
+            <input
+            type="number"
+            [(ngModel)]="aadhaar"
+            required class="form-control mr-2"  #userAadhaar="ngModel" id="userAadhaar" maxlength="12" pattern="\d{12}" aria-describedby="aadhaarHelp" placeholder="Enter Aadhaar">
+            <button class="btn btn-primary" [disabled]="(userAadhaar.errors && userAadhaar.errors.pattern) || !aadhaar || !agree" (click)="setAadhaarVerified()">Verify</button>
+        </div>
+        <div class="aadhaar-agree">
+            <div class="form-check">
+                <input class="form-check-input" [(ngModel)]="agree" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  I agree to esign the <a href="#">KYC Document</a> to get started
+                </label>
+              </div>
+        </div>
+    </div>
+    <div class="otp-div" *ngIf="aadhaarVerified === true">
+        <input
+            type="text"
+            [(ngModel)]="otp" #userOTP="ngModel" id="userOTP" pattern="\d{6}"
+            required class="form-control mr-2"  aria-describedby="otpHelp" placeholder="Enter OTP">
+        <button class="btn btn-primary" [disabled]="(userOTP.errors && userOTP.errors.pattern) || !otp " (click)="submit()">Submit</button>
+    </div>
+</div>

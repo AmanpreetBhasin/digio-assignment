@@ -1,0 +1,13 @@
+.document-view {
+    .document {
+        height: 90vh;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+    }
+    button {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+}

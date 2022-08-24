@@ -1,0 +1,110 @@
+.login-wrapper {
+    .header {
+        float: left;
+        .main-header {
+            display: inline-block;
+            font-size: 1.6rem;
+        }
+        .sub-header {
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+    }
+    .logo {
+        padding: 20px;
+        position: absolute;  
+        right: 0;  
+        top: 0;
+        width: 240px;
+    }
+    .login-div {
+        margin-top: 20px;
+        .google-login {
+            width: 60%;
+            min-width: 500px;
+            text-align: center;
+            margin: auto;
+            span {
+                display: block;
+                .google-btn {
+                    margin: 20px;
+                }
+            }
+        }
+        .email-login {
+            text-align: left;
+            padding: 0px 50px;
+            width: 60%;
+            min-width: 500px;
+            margin: auto;
+            margin-top: 30px;
+            .submit-email-div {
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+    }
+    .navbar-bottom {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+    .strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; 
+    }
+    
+    .strike > span {
+        position: relative;
+        padding: 10px;
+        display: inline-block;
+    }
+    
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: #333;
+    }
+    
+    .strike > span:before {
+        right: 100%;
+    }
+    
+    .strike > span:after {
+        left: 100%;
+    }
+    .navbar-bottom {
+        padding: 15px;
+        img {
+            width: 40px;
+            position: absolute;  
+            left: 0;
+            float: left;
+            margin: 8px;
+            bottom: 1px;
+        }
+        span {
+            font-size: 10px;
+            float: right;
+        }
+        .steps {
+            font-size: 20px;
+            bottom: 5px;
+            position:absolute;
+            right: 0px;
+            margin: 10px;
+        }
+        .footer-logo {
+            margin-left: 20px;
+            a {
+                color: darkblue;
+            }
+        }
+    }
+}
