@@ -24,10 +24,11 @@ export class AadhaarValidationComponent implements OnInit {
   submit() {
     const OTP = 123456;
     if(this.otp == OTP) {
-      console.log(this.bsModalRef);
       this.validationService.updateValidation(false);
       this.bsModalRef.hide();
       alert('Aadhaar Verified Successfully');
+    } else {
+      alert('OTP is incorrect try again');
     }
   }
   close() {

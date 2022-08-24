@@ -14,6 +14,7 @@ export class DocumentViewComponent implements OnInit {
   constructor(private modalService: BsModalService, private validationService: ValidationService) {}
 
   ngOnInit(): void {
+    this.openModalWithComponent();
     this.validationService.validationPipeObs$.subscribe((value: boolean) => {
         this.isValidationAllowed = value;
     });

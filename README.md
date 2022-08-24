@@ -5,6 +5,9 @@ Login - **localhost:4200/login**
 
 Document View - **localhost:4200/document-view**
 
+
+OTP (static) - **123456**
+
 # DigioAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
